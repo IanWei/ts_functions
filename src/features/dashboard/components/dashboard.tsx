@@ -10,7 +10,7 @@ export const Dashboard: FC = () => {
     }, [])
     return (
         <div>
-            dashboard
+            dashboard changed
         </div>
     )
 }
