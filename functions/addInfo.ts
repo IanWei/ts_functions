@@ -2,9 +2,11 @@ import { Handler } from '@netlify/functions';
 import { URL, URLSearchParams } from 'url';
 import fetch from 'node-fetch';
 
-export const handler: Handler = async () => {
+export const handler: Handler = async ( event ) => {
+    const { queryStringParameters } = event;
     const url = new URL(`${process.env.API_URL}/add_info`);
     const params = {
+        ...queryStringParameters,
         outputFormat: 'rapidJSON'
     };
     const headers = {
