@@ -1,5 +1,7 @@
 import React, { FC, useEffect } from 'react';
-import { addInfo } from '../../api/addInfo';
+import { Calendar } from '@i.w/trip-plan';
+import { addInfo } from '../api/addInfo';
+import { StyledDashboard } from './Dashboard.styled';
 
 export const Dashboard: FC = () => {
     useEffect(() => {
@@ -9,8 +11,8 @@ export const Dashboard: FC = () => {
         })()
     }, [])
     return (
-        <div>
-            dashboard changed
-        </div>
+        <StyledDashboard>
+            <Calendar />
+        </StyledDashboard>
     )
 }

@@ -1097,7 +1097,9 @@ var handler = async (event) => {
   const { queryStringParameters } = event;
   const url = new import_url.URL(`${process.env.API_URL}/add_info`);
   const params = __spreadProps(__spreadValues({}, queryStringParameters), {
-    outputFormat: "rapidJSON"
+    outputFormat: "rapidJSON",
+    filterPublicationStatus: "current",
+    itdLPxx_selStop: "10101429"
   });
   const headers = {
     "Authorization": `apikey ${process.env.API_KEY}`

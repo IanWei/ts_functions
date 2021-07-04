@@ -7,7 +7,9 @@ export const handler: Handler = async ( event ) => {
     const url = new URL(`${process.env.API_URL}/add_info`);
     const params = {
         ...queryStringParameters,
-        outputFormat: 'rapidJSON'
+        outputFormat: 'rapidJSON',
+        filterPublicationStatus: 'current',
+        itdLPxx_selStop: '10101429'
     };
     const headers = {
         'Authorization': `apikey ${process.env.API_KEY}`
@@ -23,6 +25,9 @@ export const handler: Handler = async ( event ) => {
             body: JSON.stringify(data)
         }
     } catch ( e ) {
-        console.log(e);
+        return {
+            statusCode: 500,
+            body: JSON.stringify(e)
+        }
     }
 }
