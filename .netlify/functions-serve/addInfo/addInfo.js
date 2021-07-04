@@ -1,1 +1,1 @@
-module.exports = require('./src/addInfo.js')
+module.exports = require('./src/functions/addInfo.js')

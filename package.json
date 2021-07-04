@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@i.w/trip-plan": "^0.2.0",
+    "@i.w/trip-plan": "^0.2.1",
     "@netlify/functions": "^0.7.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",

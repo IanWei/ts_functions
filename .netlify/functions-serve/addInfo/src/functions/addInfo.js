@@ -1115,7 +1115,10 @@ var handler = async (event) => {
       body: JSON.stringify(data)
     };
   } catch (e) {
-    console.log(e);
+    return {
+      statusCode: 500,
+      body: JSON.stringify(e)
+    };
   }
 };
 // Annotate the CommonJS export names for ESM import in node:
